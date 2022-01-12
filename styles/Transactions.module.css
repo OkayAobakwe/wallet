@@ -14,3 +14,19 @@
     width: 100%;
   }
 }
+.div {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.depositDiv {
+  flex-direction: row;
+}
+.label {
+  margin-right: 5px;
+}
+.p {
+  margin: auto;
+  padding-top: 3rem;
+}

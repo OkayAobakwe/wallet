@@ -60,7 +60,7 @@ export const data = [
            "type":"DEBIT",
            "amount":9196,
            "runningBalance":1314963,
-           "postingDate":"2021-06-19T00:00:00.000Z",
+           "postingDate":"2021-07-19T00:00:00.000Z",
            "valueDate":"2021-06-19T00:00:00.000Z",
            "actionDate":"2021-06-19T00:00:00.000Z",
            "accruedBankCharge":0,
