@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Transactions Component renders successfully 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="div"
+      >
+        <div
+          class="depositeDiv"
+        >
+          <label
+            class="label"
+          >
+            Deposit:
+          </label>
+          <input
+            type="number"
+            value="0"
+          />
+          <button>
+            Deposit
+          </button>
+        </div>
+        <h4>
+          Available Balance: R
+          2228257
+        </h4>
+        <p
+          class="p"
+        >
+          Transaction History
+        </p>
+        <label
+          class="label"
+        >
+          Filter:
+        </label>
+        <select
+          name="filter"
+        >
+          <option
+            value="all"
+          >
+            All
+          </option>
+          <option
+            value="debit"
+          >
+            Debit
+          </option>
+          <option
+            value="credit"
+          >
+            Credit
+          </option>
+        </select>
+        <table
+          class="table"
+        >
+          <thead>
+            <tr>
+              <th>
+                Date
+              </th>
+              <th>
+                Description
+              </th>
+              <th>
+                Type
+              </th>
+              <th>
+                Amount
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                2021-05-03
+              </td>
+              <td>
+                POS Purchase Uber Trip Help.Uber 480000*2299 30 Apr
+              </td>
+              <td>
+                DEBIT
+              </td>
+              <td>
+                29400
+              </td>
+            </tr>
+            <tr>
+              <td>
+                2021-04-28
+              </td>
+              <td>
+                Salary
+              </td>
+              <td>
+                CREDIT
+              </td>
+              <td>
+                115900
+              </td>
+            </tr>
+            <tr>
+              <td>
+                2021-05-04
+              </td>
+              <td>
+                Magtape Debit Afrihost A13290000
+              </td>
+              <td>
+                DEBIT
+              </td>
+              <td>
+                3900
+              </td>
+            </tr>
+            <tr>
+              <td>
+                2021-06-19
+              </td>
+              <td>
+                #Monthly Account Fee
+              </td>
+              <td>
+                DEBIT
+              </td>
+              <td>
+                8000
+              </td>
+            </tr>
+            <tr>
+              <td>
+                2021-07-19
+              </td>
+              <td>
+                #Service Fees
+              </td>
+              <td>
+                DEBIT
+              </td>
+              <td>
+                9196
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="div"
+    >
+      <div
+        class="depositeDiv"
+      >
+        <label
+          class="label"
+        >
+          Deposit:
+        </label>
+        <input
+          type="number"
+          value="0"
+        />
+        <button>
+          Deposit
+        </button>
+      </div>
+      <h4>
+        Available Balance: R
+        2228257
+      </h4>
+      <p
+        class="p"
+      >
+        Transaction History
+      </p>
+      <label
+        class="label"
+      >
+        Filter:
+      </label>
+      <select
+        name="filter"
+      >
+        <option
+          value="all"
+        >
+          All
+        </option>
+        <option
+          value="debit"
+        >
+          Debit
+        </option>
+        <option
+          value="credit"
+        >
+          Credit
+        </option>
+      </select>
+      <table
+        class="table"
+      >
+        <thead>
+          <tr>
+            <th>
+              Date
+            </th>
+            <th>
+              Description
+            </th>
+            <th>
+              Type
+            </th>
+            <th>
+              Amount
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              2021-05-03
+            </td>
+            <td>
+              POS Purchase Uber Trip Help.Uber 480000*2299 30 Apr
+            </td>
+            <td>
+              DEBIT
+            </td>
+            <td>
+              29400
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2021-04-28
+            </td>
+            <td>
+              Salary
+            </td>
+            <td>
+              CREDIT
+            </td>
+            <td>
+              115900
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2021-05-04
+            </td>
+            <td>
+              Magtape Debit Afrihost A13290000
+            </td>
+            <td>
+              DEBIT
+            </td>
+            <td>
+              3900
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2021-06-19
+            </td>
+            <td>
+              #Monthly Account Fee
+            </td>
+            <td>
+              DEBIT
+            </td>
+            <td>
+              8000
+            </td>
+          </tr>
+          <tr>
+            <td>
+              2021-07-19
+            </td>
+            <td>
+              #Service Fees
+            </td>
+            <td>
+              DEBIT
+            </td>
+            <td>
+              9196
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
