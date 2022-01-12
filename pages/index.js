@@ -17,7 +17,6 @@ export default function Home() {
       <Navbar />
       <main className={styles.main}>
         <h3>{data[0].bankName}</h3>
-        <p>Transaction History</p>
         <Transactions/>
       </main>
     </div>
