@@ -4,8 +4,6 @@ import styles from '../styles/Home.module.css'
 import { Navbar } from "../components/Navbar"
 import { Transactions } from "../components/Transactions"
 
-import { data } from "../utils/data"
-
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -16,7 +14,6 @@ export default function Home() {
       </Head>
       <Navbar />
       <main className={styles.main}>
-        <h3>{data[0].bankName}</h3>
         <Transactions/>
       </main>
     </div>
