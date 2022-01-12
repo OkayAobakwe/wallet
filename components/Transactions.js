@@ -55,13 +55,15 @@ export const Transactions = () => {
   }, [])
   
   return(
-    <div>
-      <label>Deposit:</label>
-      <input type="number" value={deposit} onChange={changeDeposit} />
-      <button onClick={transferValue}>Deposit</button>
+    <div className={styles.div}>
+      <div className={styles.depositeDiv}>
+        <label className={styles.label}>Deposit:</label>
+        <input type="number" value={deposit} onChange={changeDeposit} />
+        <button onClick={transferValue}>Deposit</button>
+      </div>
       <h4>Available Balance: R{availableBalance}</h4>
-      <p>Transaction History</p>
-      <p>Filter:</p>
+      <p className={styles.p}>Transaction History</p>
+      <label className={styles.label}>Filter:</label>
       <select 
         name="filter"
         onChange={(e) => {
