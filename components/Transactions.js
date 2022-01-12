@@ -5,17 +5,20 @@ import { data } from "../utils/data"
 export const Transactions = () => {
 
   const [transactions, setTransactions] = useState([])
+  const [filteredTransactions, setFilteredTransactions] = useState([])
+  const [filtered, setFiltered] = useState(false)
   const [deposit, setDeposit] = useState(0)
   const [availableBalance, setAvailableBalance] = useState(0)
 
-  const tableRows = transactions.map((info) => (
-    <tr>
-      <td>{info.postingDate.slice(0, 10)}</td>
-      <td>{info.description}</td>
-      <td>{info.type}</td>
-      <td>{info.amount}</td>
-    </tr>
-  ))
+  const tableRows = (transactions) => (
+    transactions.map((info) => (
+      <tr>
+        <td>{info.postingDate.slice(0, 10)}</td>
+        <td>{info.description}</td>
+        <td>{info.type}</td>
+        <td>{info.amount}</td>
+      </tr>
+  )))
 
   const addRows = (data) => {
     const totalTransactions = transactions.length;
@@ -45,13 +48,32 @@ export const Transactions = () => {
     setTransactions(data[0].transactions)
     setAvailableBalance(data[0].openingBalance)
   }, [])
-  console.log(transactions)
+  console.log(filteredTransactions)
   return(
     <div>
       <label>Deposit:</label>
       <input type="number" value={deposit} onChange={changeDeposit} />
       <button onClick={transferValue}>Click Me</button>
       <h4>Available Balance: R{availableBalance}</h4>
+      <p>Transaction History</p>
+      <p>Filter:</p>
+      <select 
+        name="filter"
+        onChange={(e) => {
+          setFiltered(true)
+          e.target.value === "debit" ?
+            setFilteredTransactions(
+              transactions.filter(transactionType => transactionType.type === 'DEBIT'))
+            : e.target.value === "credit" ?
+              setFilteredTransactions(
+                transactions.filter(transactionType => transactionType.type === 'CREDIT'))
+              : setFilteredTransactions(transactions)
+        }}
+      >
+        <option value="all">All</option>
+        <option value="debit">Debit</option>
+        <option value="credit">Credit</option>
+      </select>
       <table>
         <thead>
           <tr>
@@ -61,7 +83,7 @@ export const Transactions = () => {
             <th>Amount</th>
           </tr>
         </thead>
-        <tbody>{tableRows}</tbody>
+        <tbody>{!filtered ? tableRows(transactions) : tableRows(filteredTransactions)}</tbody>
       </table>
     </div>
   )
