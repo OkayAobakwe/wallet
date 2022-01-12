@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 
+import styles from "../styles/Transactions.module.css"
+
 import { data } from "../utils/data"
 
 export const Transactions = () => {
@@ -12,7 +14,7 @@ export const Transactions = () => {
 
   const tableRows = (transactions) => (
     transactions.map((info) => (
-      <tr>
+      <tr key={info.postingDate}>
         <td>{info.postingDate.slice(0, 10)}</td>
         <td>{info.description}</td>
         <td>{info.type}</td>
@@ -20,6 +22,7 @@ export const Transactions = () => {
       </tr>
   )))
 
+  //helper function to append the table
   const addRows = (data) => {
     const totalTransactions = transactions.length;
     data.id = totalTransactions + 1;
@@ -27,11 +30,13 @@ export const Transactions = () => {
     updatedTransactions.push(data);
     setTransactions(updatedTransactions);
   };
-
+  
+  //onChange handler for the amount to be deposited
   const changeDeposit = (event) => {
     setDeposit(event.target.value);
   };
-
+  
+  //update available balance and add new row to the table
   const transferValue = (event) => {
     event.preventDefault();
     const val = {
@@ -48,12 +53,12 @@ export const Transactions = () => {
     setTransactions(data[0].transactions)
     setAvailableBalance(data[0].openingBalance)
   }, [])
-  console.log(filteredTransactions)
+  
   return(
     <div>
       <label>Deposit:</label>
       <input type="number" value={deposit} onChange={changeDeposit} />
-      <button onClick={transferValue}>Click Me</button>
+      <button onClick={transferValue}>Deposit</button>
       <h4>Available Balance: R{availableBalance}</h4>
       <p>Transaction History</p>
       <p>Filter:</p>
@@ -67,14 +72,14 @@ export const Transactions = () => {
             : e.target.value === "credit" ?
               setFilteredTransactions(
                 transactions.filter(transactionType => transactionType.type === 'CREDIT'))
-              : setFilteredTransactions(transactions)
+              : setFiltered(false)
         }}
       >
         <option value="all">All</option>
         <option value="debit">Debit</option>
         <option value="credit">Credit</option>
       </select>
-      <table>
+      <table className={styles.table}>
         <thead>
           <tr>
             <th>Date</th>
