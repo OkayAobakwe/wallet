@@ -6,6 +6,7 @@ export const Transactions = () => {
 
   const [transactions, setTransactions] = useState([])
   const [deposit, setDeposit] = useState(0)
+  const [availableBalance, setAvailableBalance] = useState(0)
 
   const tableRows = transactions.map((info) => (
     <tr>
@@ -13,7 +14,6 @@ export const Transactions = () => {
       <td>{info.description}</td>
       <td>{info.type}</td>
       <td>{info.amount}</td>
-      <td>{info.runningBalance}</td>
     </tr>
   ))
 
@@ -37,18 +37,21 @@ export const Transactions = () => {
       amount: deposit,
       description: 'Deposit'
     };
+    setAvailableBalance(Number(availableBalance) + Number(deposit))
     addRows(val)
   };
 
   useEffect(() => {
     setTransactions(data[0].transactions)
+    setAvailableBalance(data[0].openingBalance)
   }, [])
   console.log(transactions)
   return(
     <div>
       <label>Deposit:</label>
       <input type="number" value={deposit} onChange={changeDeposit} />
-      <button onClick={transferValue}> Click Me</button>
+      <button onClick={transferValue}>Click Me</button>
+      <h4>Available Balance: R{availableBalance}</h4>
       <table>
         <thead>
           <tr>
@@ -56,7 +59,6 @@ export const Transactions = () => {
             <th>Description</th>
             <th>Type</th>
             <th>Amount</th>
-            <th>Balance</th>
           </tr>
         </thead>
         <tbody>{tableRows}</tbody>

@@ -4,6 +4,7 @@ export const data = [
      "productName":"gold business account",
      "bankName":"FNB",
      "id":"612133397d18d9000852af3d",
+     "openingBalance": 2228257,
      "transactions":[
         {
            "type":"DEBIT",
