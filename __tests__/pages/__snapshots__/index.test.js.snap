@@ -18,30 +18,39 @@ Object {
         <main
           class="main"
         >
-          <h3>
-            FNB
-          </h3>
-          <div>
-            <label>
-              Deposit:
-            </label>
-            <input
-              type="number"
-              value="0"
-            />
-            <button>
-              Deposit
-            </button>
+          <div
+            class="div"
+          >
+            <div
+              class="depositeDiv"
+            >
+              <label
+                class="label"
+              >
+                Deposit:
+              </label>
+              <input
+                type="number"
+                value="0"
+              />
+              <button>
+                Deposit
+              </button>
+            </div>
             <h4>
               Available Balance: R
               2228257
             </h4>
-            <p>
+            <p
+              class="p"
+            >
               Transaction History
             </p>
-            <p>
+            <label
+              class="label"
+            >
               Filter:
-            </p>
+            </label>
             <select
               name="filter"
             >
@@ -111,7 +120,7 @@ Object {
                 </tr>
                 <tr>
                   <td>
-                    2021-05-03
+                    2021-05-04
                   </td>
                   <td>
                     Magtape Debit Afrihost A13290000
@@ -139,7 +148,7 @@ Object {
                 </tr>
                 <tr>
                   <td>
-                    2021-06-19
+                    2021-07-19
                   </td>
                   <td>
                     #Service Fees
@@ -172,30 +181,39 @@ Object {
       <main
         class="main"
       >
-        <h3>
-          FNB
-        </h3>
-        <div>
-          <label>
-            Deposit:
-          </label>
-          <input
-            type="number"
-            value="0"
-          />
-          <button>
-            Deposit
-          </button>
+        <div
+          class="div"
+        >
+          <div
+            class="depositeDiv"
+          >
+            <label
+              class="label"
+            >
+              Deposit:
+            </label>
+            <input
+              type="number"
+              value="0"
+            />
+            <button>
+              Deposit
+            </button>
+          </div>
           <h4>
             Available Balance: R
             2228257
           </h4>
-          <p>
+          <p
+            class="p"
+          >
             Transaction History
           </p>
-          <p>
+          <label
+            class="label"
+          >
             Filter:
-          </p>
+          </label>
           <select
             name="filter"
           >
@@ -265,7 +283,7 @@ Object {
               </tr>
               <tr>
                 <td>
-                  2021-05-03
+                  2021-05-04
                 </td>
                 <td>
                   Magtape Debit Afrihost A13290000
@@ -293,7 +311,7 @@ Object {
               </tr>
               <tr>
                 <td>
-                  2021-06-19
+                  2021-07-19
                 </td>
                 <td>
                   #Service Fees
